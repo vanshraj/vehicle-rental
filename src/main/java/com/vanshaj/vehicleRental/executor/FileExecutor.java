@@ -6,6 +6,7 @@ import com.vanshaj.vehicleRental.service.RegistrationService;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class FileExecutor extends Executor {
@@ -34,6 +35,6 @@ public class FileExecutor extends Executor {
 
     @Override
     public void write(String output) {
-        System.out.println(output);
+        System.out.println(output.toUpperCase(Locale.ROOT));
     }
 }

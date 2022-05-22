@@ -38,6 +38,6 @@ public class BookingServiceImpl implements BookingService {
         if(bestPriceVehicle.isEmpty()) return -1;
         bookingRepository.book(bestPriceVehicle.get().getId(),
                 bookingDto.getStartTime(), bookingDto.getEndTime());
-        return bestPriceVehicle.get().getPrice();
+        return bestPriceVehicle.get().getPrice()*(bookingDto.getEndTime()-bookingDto.getStartTime());
     }
 }

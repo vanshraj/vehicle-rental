@@ -4,6 +4,7 @@ import com.vanshaj.vehicleRental.service.BookingService;
 import com.vanshaj.vehicleRental.service.QueryService;
 import com.vanshaj.vehicleRental.service.RegistrationService;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class CommandExecutor extends Executor {
@@ -24,6 +25,6 @@ public class CommandExecutor extends Executor {
 
     @Override
     public void write(String output) {
-        System.out.println(output);
+        System.out.println(output.toUpperCase(Locale.ROOT));
     }
 }
